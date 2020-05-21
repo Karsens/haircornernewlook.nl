@@ -1,68 +1,82 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, View, Text } from "react-native";
 
-export default function LinksScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      <p>Wij hebben twee filialen:</p>
+class AboutScreen extends React.Component {
+  render() {
+    return (
+      <ScrollView style={styles.container}>
+        <Text>Wij hebben twee filialen</Text>
 
-      <b>Haircorner Newlook Brinkstraat:</b>
-      <table>
-        <tr>
-          <td>adres:</td>
-          <td>Brinkstraat 7</td>
-        </tr>
-        <tr>
-          <td>plaats:</td>
-          <td>Vries</td>
-        </tr>
-        <tr>
-          <td>postbus 6:</td>
-          <td>9480 AA</td>
-        </tr>
+        <Text style={{ fontWeight: "bold", marginTop: 20 }}>
+          Haircorner Newlook Brinkstraat
+        </Text>
 
-        <tr>
-          <td colspan={2}>
-            Afspraak maken? Ons telefoonnummer is: <b>(0592)543587</b>
-          </td>
-        </tr>
-      </table>
+        <View style={styles.box}>
+          <View style={styles.row}>
+            <Text>Adres</Text>
+            <Text>Brinkstraat 7</Text>
+          </View>
+          <View style={styles.row}>
+            <Text>Plaats</Text>
+            <Text>Vries</Text>
+          </View>
+          <View style={styles.row}>
+            <Text>Postcode</Text>
+            <Text>9481 BJ</Text>
+          </View>
+          <View style={{ marginTop: 20 }}>
+            <Text>
+              Afspraak maken? Ons telefoonnummer is: <b>(0592)543587</b>
+            </Text>
+          </View>
+        </View>
 
-      <br />
-      <br />
-      <b>Haircorner newlook Tynaarlose straat:</b>
-      <table>
-        <tr>
-          <td>adres:</td>
-          <td>Tynaarlose straat 56 (Kornoeljehof)</td>
-        </tr>
-        <tr>
-          <td>plaats:</td>
-          <td>Vries</td>
-        </tr>
-        <tr>
-          <td>postbus 6:</td>
-          <td>9480 AA</td>
-        </tr>
+        <Text style={{ fontWeight: "bold", marginTop: 20 }}>
+          Haircorner Newlook Tynaarlose straat
+        </Text>
 
-        <tr>
-          <td colspan={2}>
-            Afspraak maken? Ons telefoonnummer is <b>(0592)530700</b>
-          </td>
-        </tr>
-      </table>
-    </ScrollView>
-  );
+        <View style={styles.box}>
+          <View style={styles.row}>
+            <Text>Adres</Text>
+            <Text>Tynaarlose straat 56 (Kornoeljehof)</Text>
+          </View>
+          <View style={styles.row}>
+            <Text>Plaats</Text>
+            <Text>Vries</Text>
+          </View>
+          <View style={styles.row}>
+            <Text>Postcode</Text>
+            <Text>9481 AD</Text>
+          </View>
+          <View style={{ marginTop: 20 }}>
+            <Text>
+              Afspraak maken? Ons telefoonnummer is: <b>(0592)530700</b>
+            </Text>
+          </View>
+        </View>
+      </ScrollView>
+    );
+  }
 }
 
-LinksScreen.navigationOptions = {
+AboutScreen.navigationOptions = {
   title: "Links"
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
+    margin: 15,
     backgroundColor: "#fff"
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: 300
+  },
+  box: {
+    marginVertical: 10
   }
 });
+
+export default AboutScreen;

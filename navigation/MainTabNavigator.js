@@ -2,13 +2,12 @@ import React from "react";
 import { Platform } from "react-native";
 import {
   createStackNavigator,
-  createBottomTabNavigator
+  createBottomTabNavigator,
 } from "react-navigation";
 
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
 import AboutScreen from "../screens/AboutScreen";
-import PricesScreen from "../screens/PricesScreen";
 
 const tabNavigator = createBottomTabNavigator({
   Home: {
@@ -17,8 +16,8 @@ const tabNavigator = createBottomTabNavigator({
       tabBarLabel: "Home",
       tabBarIcon: ({ focused }) => (
         <TabBarIcon focused={focused} name={"md-home"} />
-      )
-    }
+      ),
+    },
   },
   About: {
     screen: AboutScreen,
@@ -26,18 +25,18 @@ const tabNavigator = createBottomTabNavigator({
       tabBarLabel: "Over",
       tabBarIcon: ({ focused }) => (
         <TabBarIcon focused={focused} name={"ios-information-circle-outline"} />
-      )
-    }
+      ),
+    },
   },
-  Prices: {
-    screen: PricesScreen,
-    navigationOptions: {
-      tabBarLabel: "Prijzen",
-      tabBarIcon: ({ focused }) => (
-        <TabBarIcon focused={focused} name={"ios-gift"} />
-      )
-    }
-  }
+  // Prices: {
+  //   screen: PricesScreen,
+  //   navigationOptions: {
+  //     tabBarLabel: "Prijzen",
+  //     tabBarIcon: ({ focused }) => (
+  //       <TabBarIcon focused={focused} name={"ios-gift"} />
+  //     )
+  //   }
+  // }
 });
 
 tabNavigator.path = "";

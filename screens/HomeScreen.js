@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 
 export default function HomeScreen() {
@@ -32,32 +32,32 @@ export default function HomeScreen() {
 }
 
 HomeScreen.navigationOptions = {
-  header: null
+  header: null,
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
   },
   developmentModeText: {
     marginBottom: 20,
     color: "rgba(0,0,0,0.4)",
     fontSize: 14,
     lineHeight: 19,
-    textAlign: "center"
+    textAlign: "center",
   },
   contentContainer: {
-    paddingTop: 30
+    paddingTop: 30,
   },
   welcomeContainer: {
-    margin: 40
+    margin: 40,
   },
   welcomeImage: {
     width: 200,
     height: 150,
     resizeMode: "contain",
     marginTop: 3,
-    marginLeft: -10
-  }
+    marginLeft: -10,
+  },
 });
